@@ -11,7 +11,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Liste de toutes les memoire
+        Memoires de la faculté Centre Informatique
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
@@ -82,7 +82,7 @@
 
                 $query = $conn->query($sql);
                 while ($row = $query->fetch_assoc()) {
-                  $photo = (!empty($row['memory_photo'])) ? '../images/' . $row['memory_photo'] : '../images/profile.jpg';
+                  $photo = (!empty($row['memory_photo'])) ? '../../AdminDocuments/images/' . $row['memory_photo'] : '../../AdminDocuments/images/profile.jpg';
                     echo "
                         <tr>
                           <td>" . $row['name_faculty'] ."</td>

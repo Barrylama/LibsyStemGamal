@@ -58,7 +58,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    $sql = "SELECT * FROM reader_category";
+                    $sql = "SELECT * FROM reader_category WHERE reader_category_id NOT IN (21, 22)";
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       echo "

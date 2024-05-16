@@ -18,56 +18,6 @@
       <li class="header">GESTIONS</li>
       <li class="treeview">
         <a href="#">
-          <i class="fa fa-refresh"></i>
-          <span>Transactions</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-        <li class="treeview">
-        <a href="#">
-          <i class="fa fa-refresh"></i>
-          <span>Livres</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="book_consultation.php"><i class="fa fa-circle-o"></i> Consultations</a></li>
-          <li><a href="book_borrow.php"><i class="fa fa-circle-o"></i> Emprunts</a></li>
-        </ul>
-      </li>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-refresh"></i>
-          <span>Memoires</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="../memory/memory_consultation.php"><i class="fa fa-circle-o"></i> Consultations</a></li>
-          <li><a href="../memory/memory_borrow.php"><i class="fa fa-circle-o"></i> Emprunts</a></li>
-        </ul>
-      </li>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-refresh"></i>
-          <span>Revues</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="../review/review_consultation.php"><i class="fa fa-circle-o"></i> Consultations</a></li>
-          <li><a href="../review/review_borrow.php"><i class="fa fa-circle-o"></i> Emprunts</a></li>
-        </ul>
-      </li>
-        </ul>
-      </li>
-      <li class="treeview">
-        <a href="#">
           <i class="fa fa-book"></i>
           <span>Livres</span>
           <span class="pull-right-container">

@@ -12,7 +12,6 @@
     .card-group {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
 
     .card {
@@ -31,7 +30,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tableau de bord
+        Tableau de bord Admin Accueil
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
@@ -46,7 +45,7 @@
           echo "
             <div class='alert alert-danger alert-dismissible'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-              <h4><i class='icon fa fa-warning'></i> Error!</h4>
+              <h5><i class='icon fa fa-warning'></i> Error!</h5>
               ".$_SESSION['error']."
             </div>
           ";
@@ -56,7 +55,7 @@
           echo "
             <div class='alert alert-success alert-dismissible'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-              <h4><i class='icon fa fa-check'></i> Success!</h4>
+              <h5><i class='icon fa fa-check'></i> Success!</h5>
               ".$_SESSION['success']."
             </div>
           ";
@@ -127,12 +126,6 @@
         <a href="reader.php" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
       </div>
 </div>
-
-
-
-        <!-- ./col -->
-       
-
         <div class="col-lg-3 col-xs-6">
     <!-- small box -->
     <div class="small-box" style="background-color: #ff72de; color: #fff;">
@@ -150,102 +143,13 @@
         <div class="icon">
             <i class="fa fa-female"></i>
         </div>
-        <a href="book.php" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="reader.php" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
     </div>
-    
-    
-</div>
-    <section class="content-header">
-      <h1">
-        Tableau de bord des livres
-        <br>
-      </h1>
-    </section>
-<div class="col-lg-3 col-xs-6">
-    <!-- small box -->
-    <div class="small-box" style="background-color: #ff72de; color: #fff;">
-        <div class="inner">
-        <?php
-        $sql = "SELECT * FROM book";
-        $query = $conn->query($sql);
-        $row = $query->fetch_assoc();
-        echo "<h3>".$query->num_rows."</h3>"
-        ?>
-            <p>Total des livres</p>
-        </div>
-        <div class="icon">
-        <img src="icons/book-stack.png" alt="Votre Icône" />
-        </div>
-        <a href="book.php" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
-    </div>    
+  
 </div>
 
-
-<div class="col-lg-3 col-xs-6">
-    <!-- small box -->
-    <div class="small-box" style="background-color: #2AC7B0; color: #fff;">
-        <div class="inner">
-        <?php
-        $sql = "SELECT * FROM book_consultation";
-        $query = $conn->query($sql);
-        $row = $query->fetch_assoc();
-        echo "<h3>".$query->num_rows."</h3>"
-        ?>
-            <p>Livres consultés </p>
-        </div>
-        <div class="icon">
-        <img src="icons/consultant.png" alt="Votre Icône" />
-        </div>
-        <a href="../book/book.php" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
-    </div>    
-    
-</div>
-<div class="col-lg-3 col-xs-6">
-    <!-- small box -->
-    <div class="small-box" style="background-color: #2AC7B0; color: #fff;">
-        <div class="inner">
-        <?php
-        $sql = "SELECT * FROM book_borrow";
-        $query = $conn->query($sql);
-        $row = $query->fetch_assoc();
-        echo "<h3>".$query->num_rows."</h3>"
-        ?>
-            <p>Livres empruntés</p>
-        </div>
-        <div class="icon">
-        <img src="icons/book.png" alt="Votre Icône" />
-        </div>
-        <a href="../book/book_borrow.php" class="small-box-footer">Plus d'info <i class="fa fa-arrow-circle-right"></i></a>
-    </div>    
-    
-</div>
-
-        <style>
-    .card-group {
-        border: 1px solid #d6dae1;
-        border-radius:10px;
-        background-color:#d6dae1;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .card-title{
-      text-align: center;
-    }
-    .card {
-      background-color: #fff;
-      margin-left: 10px;
-      margin-right: 10px;
-        text-align: center;
-        border: 1px solid #d6dae1;
-        border-radius:10px;
-        margin-top: 10px;
-        width: 18%; /* Ajustez la largeur des cartes selon vos préférences */
-        margin-bottom: 10px;
-    }
-</style>
 <div class="col-lg-12 col-xs-7">
-  <h3 class="card-title">STATISTIQUE SUR LES LECTEURS</h3>
+  <h3 class="card-title">STATISTIQUE SUR LES LECTEURS PAR CATEGORIE</h3>
     <div class="card-group">
         <?php
             $sql = "SELECT reader_category.name_category_reader, COUNT(reader.reader_id) AS num_readers
@@ -260,10 +164,9 @@
                 echo "<div class='card'>";
                 echo "<div class='card-body'>";
                 echo "<h5 class='card-title'>".$row['name_category_reader']."</h5>";
-                echo "<p class='card-text'>".$row['num_readers']." lecteurs</p>";
+                echo "<p class='card-text'>".$row['num_readers']." Lecteurs</p>";
                 echo "</div>";
                 echo "<div class='card-footer'>";
-                echo "<a href='reader.php' class='card-link'>Plus d'info <i class='fa fa-arrow-circle-right'></i></a>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -271,9 +174,59 @@
     </div>
 </div>
 
-        <!-- ./col -->
-        
-      </div>
+
+    
+
+<style>
+    .card-group {
+        border: 1px solid #d6dae1;
+        border-radius:10px;
+        background-color:#d6dae1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .small-box{
+      border: 1px solid #d6dae1;
+        border-radius:15px;
+    }
+    .small-box-footer
+    {
+      border: 1px solid inherit;
+        border-radius:15px;
+    }
+    .card-title{
+      font-size: 20px;
+      text-align: center;
+    }
+    .card-title4{
+      text-align: center;
+    }
+    .card {
+      background-color: #fff;
+      margin-left: 10px;
+      margin-right: 10px;
+        text-align: center;
+        border: 1px solid #d6dae1;
+        border-radius:10px;
+        margin-top: 10px;
+        width: 30%; /* Ajustez la largeur des cartes selon vos préférences */
+        margin-bottom: 10px;
+    }
+    .card-text{
+      font-size :20px;
+      color: green;
+    }
+    .content-header
+    {
+      background-color: #fff;
+      border-top: 1px solid
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+</style>
+
+<div>
       <!-- /.row -->
       <div class="row">
         <div class="col-xs-12">
@@ -315,6 +268,8 @@
   	<?php include 'includes/footer.php'; ?>
 
 </div>
+
+
 <!-- ./wrapper -->
 
 <!-- Chart Data -->
@@ -498,5 +453,6 @@ $num_women = json_encode($num_women);
         });
     });
 </script>
+
 </body>
 </html>

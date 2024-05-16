@@ -9,7 +9,9 @@
 		$reader_gender = $_POST['reader_gender'];
 		$reader_cat = $_POST['reader_category'];
 		$filename = $_FILES['photo']['name'];
-		$book_quota = $_POST['book_quota'];
+		$Matricule = $_POST['Matricule'];
+		$Departement = $_POST['Departement'];
+		$Licence = $_POST['Licence'];
 		if(!empty($filename)){
 			move_uploaded_file($_FILES['photo']['tmp_name'], '../images/'.$filename);	
 		}
@@ -22,9 +24,9 @@
 		for($i = 0; $i < 10; $i++){
 			$numbers .= $i;
 		}
-		$reader_number = substr(str_shuffle($letters), 0, 3).substr(str_shuffle($numbers), 0, 9);
+		$reader_number = 'ET'.substr(str_shuffle($letters), 0, 2).substr(str_shuffle($numbers), 0, 9);
 		//
-		$sql = "INSERT INTO reader (reader_number, reader_firstname, reader_lastname,reader_phone,reader_address,gender_id,reader_photo,reader_category_id,book_quota,created_on) VALUES ('$reader_number', '$firstname', '$lastname',$reader_phone,'$reader_address','$reader_gender','$filename',$reader_cat,'$book_quota', NOW())";
+		$sql = "INSERT INTO reader (reader_number, reader_firstname, reader_lastname,reader_phone,reader_address,gender_id,reader_photo,reader_category_id,Matricule,Departement,Licence,created_on) VALUES ('$reader_number', '$firstname', '$lastname',$reader_phone,'$reader_address','$reader_gender','$filename',$reader_cat,'$Matricule','$Departement','$Licence', NOW())";
 
 		if($conn->query($sql)){
 			$_SESSION['success'] = 'Lecteur ajouté avec succès';

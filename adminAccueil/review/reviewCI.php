@@ -11,7 +11,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Toutes les revues
+        Revues de la faculté Centre Informatique
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
@@ -81,7 +81,7 @@
 
                 $query = $conn->query($sql);
                 while ($row = $query->fetch_assoc()) {
-                  $photo = (!empty($row['review_photo'])) ? '../images/' . $row['review_photo'] : '../images/profile.jpg';
+                  $photo = (!empty($row['review_photo'])) ? '../../AdminDocuments/images/' . $row['review_photo'] : '../../AdminDocuments/images/profile.jpg';
                     echo "
                         <tr>
                           <td>" . $row['name_category_review'] . "</td>

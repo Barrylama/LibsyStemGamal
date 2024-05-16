@@ -88,8 +88,7 @@
 
                 $query = $conn->query($sql);
                 while ($row = $query->fetch_assoc()) {
-                  $photo = (!empty($row['book_photo'])) ? '../images/' . $row['book_photo'] : '../images/profile.jpg';
-                    echo "
+                  $photo = (!empty($row['book_photo'])) ? '../images/' . $row['book_photo'] : '../images/profile.jpg';                    echo "
                         <tr>
                           <td>" . $row['name_faculty'] ."</td>
                           <td>" . $row['name_category_book'] . "</td>

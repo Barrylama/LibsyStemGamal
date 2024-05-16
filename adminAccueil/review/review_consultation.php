@@ -87,7 +87,7 @@ include 'includes/header.php';
                     while ($row = $query->fetch_assoc()) {
                         $status = ($row['barstat']) ? '<span class="label label-success">Retourné</span>' : '<span class="label label-danger">Non Retourné</span>';
                         $review_photo = (!empty($row['review_photo'])) ? '../../AdminDocuments/images/' . $row['review_photo'] : '../../AdminDocuments/images/profile.jpg';
-                        $reader_photo = (!empty($row['reader_photo'])) ? '../images/' . $row['reader_photo'] : '../images/profile.jpg';
+                        $reader_photo = (!empty($row['reader_photo'])) ? '../../images/' . $row['reader_photo'] : '../../images/profile.jpg';
 
                         // Ajout de la colonne pour le bouton "Retourner"
                         $returnButton = ($row['barstat']) ? '' : '<button class="btn btn-success btn-xs return-btn" data-book-id="' . $row['consultation_review_id'] . '">Retourner</button>';

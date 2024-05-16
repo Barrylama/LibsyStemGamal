@@ -9,9 +9,11 @@
 		$reader_address = $_POST['reader_address'];
 		$reader_gender = $_POST['reader_gender'];
 		$course = $_POST['reader_category'];
-		$quota = $_POST['book_quota'];
+		$Matricule = $_POST['Matricule'];
+		$Departement = $_POST['Departement'];
+		$Licence = $_POST['Licence'];
 
-		$sql = "UPDATE reader SET reader_firstname = '$firstname', reader_lastname = '$lastname',reader_phone ='$reader_phone',reader_address = '$reader_address',gender_id ='$reader_gender', reader_category_id = '$course', book_quota ='$quota' WHERE reader_id = '$id'";
+		$sql = "UPDATE reader SET reader_firstname = '$firstname', reader_lastname = '$lastname',reader_phone ='$reader_phone',reader_address = '$reader_address',gender_id ='$reader_gender', reader_category_id = '$course', Matricule ='$Matricule',Departement = '$Departement', Licence = '$Licence' WHERE reader_id = '$id'";
 		if($conn->query($sql)){
 			$_SESSION['success'] = 'Lecteur modifié avec succès';
 		}

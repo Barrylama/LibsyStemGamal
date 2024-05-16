@@ -85,8 +85,8 @@ include 'includes/header.php';
                     $query = $conn->query($sql);
                     while($row = $query->fetch_assoc()){
                       $status = ($row['barstat']) ? '<span class="label label-success">Retourné</span>' : '<span class="label label-danger">Non Retourné</span>';
-                      $memory_photo = (!empty($row['memory_photo'])) ? '../../images/' . $row['memory_photo'] : '../../images/profile.jpg';
-                      $reader_photo = (!empty($row['reader_photo'])) ? '../images/' . $row['reader_photo'] : '../images/profile.jpg';
+                      $memory_photo = (!empty($row['memory_photo'])) ? '../../AdminDocuments/images/' . $row['memory_photo'] : '../../images/profile.jpg';
+                      $reader_photo = (!empty($row['reader_photo'])) ? '../../images/' . $row['reader_photo'] : '../../images/profile.jpg';
 
                       $returnButton = ($row['barstat']) ? '' : '<button class="btn btn-success btn-xs return-memory-btn" data-memory-id="' . $row['borrow_memory_id'] . '">Retourner</button>';
                       $returnDateDisplay = $row['return_date_display'];

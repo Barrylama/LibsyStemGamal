@@ -7,6 +7,13 @@
 		$query = $conn->query($sql);
 		$row = $query->fetch_assoc();
 
+
+
+		// Construire le chemin de la photo
+		$photoPath = (!empty($row['reader_photo'])) ? '../images/' . $row['reader_photo'] : '../images/profile.jpg';
+
+		// Ajouter le chemin de la photo à la réponse JSON
+		$row['reader_photo_path'] = $photoPath;
 		echo json_encode($row);
 	}
 ?>

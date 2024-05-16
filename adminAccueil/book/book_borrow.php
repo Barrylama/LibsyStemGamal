@@ -86,7 +86,7 @@ include 'includes/header.php';
                     while($row = $query->fetch_assoc()){
                       $status = ($row['barstat']) ? '<span class="label label-success">Retourné</span>' : '<span class="label label-danger">Non Retourné</span>';
                       $book_photo = (!empty($row['book_photo'])) ? '../../AdminDocuments/images/' . $row['book_photo'] : '../../AdminDocuments/images/profile.jpg';
-                      $reader_photo = (!empty($row['reader_photo'])) ? '../images/' . $row['reader_photo'] : '../images/profile.jpg';
+                      $reader_photo = (!empty($row['reader_photo'])) ? '../../images/' . $row['reader_photo'] : '../../images/profile.jpg';
 
                       $returnButton = ($row['barstat']) ? '' : '<button class="btn btn-success btn-xs return-book-btn" data-book-id="' . $row['borrow_book_id'] . '">Retourner</button>';
                       $returnDateDisplay = $row['return_date_display'];

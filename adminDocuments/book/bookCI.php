@@ -11,12 +11,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      Liste de livres de la faculté Centre Informatique
+        Liste de tous les livres
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
         <li>Livres</li>
-        <li class="active">Liste de livres de la faculté Centre Informatique</li>
+        <li class="active">Liste de tous les livres</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -82,8 +82,8 @@
                 LEFT JOIN book_category ON book_category.book_category_id = book.book_category_id
                 LEFT JOIN faculty ON faculty.faculty_id = book.faculty_id
                 LEFT JOIN book_borrow ON book_borrow.book_id = book.book_id
-                LEFT JOIN book_consultation ON book_consultation.book_id = book.book_id 
-                where faculty.faculty_id = 1 
+                LEFT JOIN book_consultation ON book_consultation.book_id = book.book_id  
+                WHERE faculty.faculty_id = 1
                 GROUP BY book.book_id";
 
                 $query = $conn->query($sql);

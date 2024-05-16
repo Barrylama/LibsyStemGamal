@@ -81,6 +81,7 @@
           <li><a href="bookCI.php"><i class="fa fa-circle-o"></i> Centre informatique</a></li>
           <li><a href="bookFSS.php"><i class="fa fa-circle-o"></i> Sciences de la santé</a></li>
           <li><a href="bookIDCF.php"><i class="fa fa-circle-o"></i> Institut des chemins de fer</a></li>
+          <li><a href="bookStatistique.php"><i class="fa fa-circle-o"></i> Statistiques</a></li>
 
         </ul>
       </li>
@@ -99,6 +100,7 @@
           <li><a href="../memory/memoryCI.php"><i class="fa fa-circle-o"></i> Centre informatique</a></li>
           <li><a href="../memory/memoryFSS.php"><i class="fa fa-circle-o"></i> Sciences de la santé</a></li>
           <li><a href="../memory/memoryIDCF.php"><i class="fa fa-circle-o"></i> Institut des chemins de fer</a></li>
+          <li><a href="../memory/memoryStatistique.php"><i class="fa fa-circle-o"></i> Statistiques</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -116,21 +118,45 @@
           <li><a href="../review/reviewCI.php"><i class="fa fa-circle-o"></i> Centre informatique</a></li>
           <li><a href="../review/reviewFSS.php"><i class="fa fa-circle-o"></i> Sciences de la santé</a></li>
           <li><a href="../review/reviewIDCF.php"><i class="fa fa-circle-o"></i> Institut des chemins de fer</a></li>
+          <li><a href="../review/reviewStatistique.php"><i class="fa fa-circle-o"></i> Statistiques</a></li>
         </ul>
       </li>
       <li class="treeview">
         <a href="#">
-        <i class="fa fa-users"></i>
+          <i class="fa fa-refresh"></i>
           <span>Lecteurs</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="../reader.php"><i class="fa fa-circle-o"></i> Liste des lecteurs</a></li>
-          <li><a href="../reader_category.php"><i class="fa fa-circle-o"></i> Categorie de lecteurs</a></li>
+        <li class="treeview">
+        <a href="#">
+          <i class="fa fa-refresh"></i>
+          <span>Etudiants</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="../reader.php"><i class="fa fa-circle-o"></i> Liste des etudiants</a></li>
+          <li><a href="../reader_category.php"><i class="fa fa-circle-o"></i> Faculté</a></li>
         </ul>
       </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-refresh"></i>
+          <span>Autres Lecteurs</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="../memory/memory_consultation.php"><i class="fa fa-circle-o"></i> Personnel Universitaire</a></li>
+          <li><a href="../memory/memory_borrow.php"><i class="fa fa-circle-o"></i> Particuliers</a></li>
+        </ul>
+      </li>
+      
      
     </ul>
   </section>

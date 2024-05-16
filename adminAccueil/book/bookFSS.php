@@ -11,7 +11,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Liste de tous les livres
+        Livres de la faculté des Sciences et Techniques de la santé
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
@@ -82,7 +82,7 @@
 
                 $query = $conn->query($sql);
                 while ($row = $query->fetch_assoc()) {
-                  $photo = (!empty($row['book_photo'])) ? '../images/' . $row['book_photo'] : '../images/profile.jpg';
+                  $photo = (!empty($row['book_photo'])) ? '../../AdminDocuments/images/' . $row['book_photo'] : '../../AdminDocuments/images/profile.jpg';
                     echo "
                         <tr>
                           <td>" . $row['name_faculty'] ."</td>
